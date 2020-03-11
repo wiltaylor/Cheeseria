@@ -1,0 +1,11 @@
+<br>
+<div class="container">
+    <mat-card *ngIf="displayCheese">
+        <mat-card-title>{{CurrentCheese.name}}</mat-card-title>
+        <mat-card-subtitle>Colour: {{CurrentCheese.colour}}<br> Cost: ${{CurrentCheese.costInCentsPerKg / 100}} per KG </mat-card-subtitle>
+        <img mat-card-image [src]="'data:image/jpg;base64,' + CurrentCheese.image">
+        <mat-card-footer>
+            <app-calculator [CostPerKG]="CurrentCheese.costInCentsPerKg"></app-calculator>
+        </mat-card-footer>
+    </mat-card>
+</div>

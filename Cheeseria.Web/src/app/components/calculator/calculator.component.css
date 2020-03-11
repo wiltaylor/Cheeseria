@@ -1,0 +1,9 @@
+.container{
+    align-items: left;
+    justify-content: center;
+    display: flex;
+}
+
+.container-item{
+    padding-left: 20px;
+}

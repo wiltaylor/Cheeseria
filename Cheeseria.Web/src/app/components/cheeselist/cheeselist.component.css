@@ -1,0 +1,14 @@
+.thumb-img{
+    width: 200px;
+    height: 200px;
+}
+
+mat-card{
+    margin: 5px;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap
+}

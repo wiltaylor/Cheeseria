@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="container-item">
+        <mat-form-field>
+        <mat-label>Qty of Cheese (KG)</mat-label>
+        <input matInput placeholder="Enter ammount of cheese in KG..." type="number" min="1" pattern="[0-9]{1,5}" [(ngModel)]="CurrentKG"> 
+        <mat-error>
+            You must enter a positive whole number.
+          </mat-error>
+        </mat-form-field>
+        <b>X</b> $ {{ CostPerKG / 100 }} = $ {{ (CostPerKG * CurrentKG) / 100 }}
+    </div>
+</div>
