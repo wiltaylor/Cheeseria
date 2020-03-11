@@ -65,6 +65,9 @@ namespace Cheeseria.API
                 app.UseDeveloperExceptionPage();
             }
 
+            //Allow static files to be served out of the root (which will be our angular front end in production).
+            app.UseFileServer();
+
             //Standard ASP.NET setup.
             app.UseHttpsRedirection();
             app.UseRouting();
