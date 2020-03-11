@@ -34,6 +34,10 @@ namespace Cheeseria.API
         /// </summary>
         public void ConfigureServices(IServiceCollection services)
         {
+            //Enable Cors to allow access from any origin. Useful for debugging angular from a different domain in this example.
+            services.AddCors(options => options.AddDefaultPolicy(builder => builder.AllowAnyOrigin().AllowAnyHeader()));
+
+
             services.AddDbContext<CheeseContext>(options => options.UseInMemoryDatabase("CheeseriaDB"));
             services.AddControllers();
 
@@ -65,6 +69,7 @@ namespace Cheeseria.API
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();
+            app.UseCors();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

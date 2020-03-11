@@ -36,7 +36,8 @@ namespace Cheeseria.Data
                 Colour = "cream",
                 Name = "Brie",
                 Published = true,
-                Image = File.ReadAllBytes("Assets/brie.jpg")
+                Image = File.ReadAllBytes("Assets/brie.jpg"),
+                CostInCentsPerKg = 1000
             });
 
             modelBuilder.Entity<Cheese>().HasData(new Cheese
@@ -45,7 +46,8 @@ namespace Cheeseria.Data
                 Colour = "white",
                 Name = "Buffalo mozzarella",
                 Published = true,
-                Image = File.ReadAllBytes("Assets/buffalo.jpg")
+                Image = File.ReadAllBytes("Assets/buffalo.jpg"),
+                CostInCentsPerKg = 2000
             });
 
             modelBuilder.Entity<Cheese>().HasData(new Cheese
@@ -54,7 +56,8 @@ namespace Cheeseria.Data
                 Colour = "pale yellow",
                 Name = "Cheddar",
                 Published = true,
-                Image = File.ReadAllBytes("Assets/cheddar.jpg")
+                Image = File.ReadAllBytes("Assets/cheddar.jpg"),
+                CostInCentsPerKg = 1050
             });
 
             modelBuilder.Entity<Cheese>().HasData(new Cheese
@@ -63,7 +66,8 @@ namespace Cheeseria.Data
                 Colour = "white",
                 Name = "Halloumi",
                 Published = true,
-                Image = File.ReadAllBytes("Assets/halloumi.jpg")
+                Image = File.ReadAllBytes("Assets/halloumi.jpg"),
+                CostInCentsPerKg = 4000
             });
 
             modelBuilder.Entity<Cheese>().HasData(new Cheese
@@ -72,7 +76,8 @@ namespace Cheeseria.Data
                 Colour = "blue",
                 Name = "Stilton",
                 Published = true,
-                Image = File.ReadAllBytes("Assets/stilton.jpg")
+                Image = File.ReadAllBytes("Assets/stilton.jpg"),
+                CostInCentsPerKg = 500
             });
         }
 
