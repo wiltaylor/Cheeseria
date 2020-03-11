@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cheeseria.API</name>
+    </assembly>
+    <members>
+        <member name="T:Cheeseria.API.Controllers.CheeseController">
+            <summary>
+            Cheese API End point handles all cheese related calls.
+            </summary>
+        </member>
+        <member name="M:Cheeseria.API.Controllers.CheeseController.#ctor(Cheeseria.Data.CheeseContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Cheeseria.API.Controllers.CheeseController.Get(System.Boolean)">
+            <summary>
+            Get all cheeses that are published
+            </summary>
+            <param name="unpublished">If set to true will also return unpublished cheeses.</param>
+            <returns>All cheese entries in the database.</returns>
+        </member>
+        <member name="M:Cheeseria.API.Controllers.CheeseController.Get(System.Int32)">
+            <summary>
+            Get a single cheese item by its Id.
+            </summary>
+            <param name="id">Id of cheese to retrieve.</param>
+            <returns>Cheese object.</returns>
+        </member>
+        <member name="M:Cheeseria.API.Controllers.CheeseController.Post(Cheeseria.Data.Models.Cheese)">
+            <summary>
+            Creates a new cheese
+            </summary>
+            <param name="value">Cheese details to store. Leave Id as 0 to create a new entry with a new Id. If it is set to a value it must not already exist.</param>
+            <returns>Id of newly created cheese. -1 if there was an error.</returns>
+        </member>
+        <member name="M:Cheeseria.API.Controllers.CheeseController.Put(Cheeseria.Data.Models.Cheese)">
+            <summary>
+            Updates an existing cheese.
+            </summary>
+            <param name="value">Cheese object to update. Set ID to id of cheese to update. Leave fields blank you don't want to update and they will be ignored
+            (with the exception of published, if left blank it will be set to false).</param>
+        </member>
+        <member name="M:Cheeseria.API.Controllers.CheeseController.Delete(System.Int32)">
+            <summary>
+            Deletes a cheese
+            </summary>
+            <param name="id">Id of cheese to remove.</param>
+        </member>
+        <member name="M:Cheeseria.API.Program.Main(System.String[])">
+            <summary>
+            Entry Point
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Cheeseria.API.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Standard ASP.NET Create Host Builder.
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cheeseria.API.Startup">
+            <summary>
+            Startup class - Standard ASP.NET Core startup code goes here.
+            </summary>
+        </member>
+        <member name="M:Cheeseria.API.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor 
+            </summary>
+        </member>
+        <member name="P:Cheeseria.API.Startup.Configuration">
+            <summary>
+            Standard ASP.NET Core configuration object. Pull config from appsettings.json
+            </summary>
+        </member>
+        <member name="M:Cheeseria.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Standard ASP.NET Service Dependency Injector
+            </summary>
+        </member>
+        <member name="M:Cheeseria.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Standard ASP.NET Configuration Setup method. Handles all routing and middleware initial configuration.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
